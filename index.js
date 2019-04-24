@@ -7,21 +7,19 @@ function startGame(){
     var index = Math.floor(Math.random() * wordsArr.length);
     displayedWord = new Word(wordsArr[index]);
     displayedWord.show();
-    userGuess();
+    propmtUser();
 }
 
-function userGuess(){
+function propmtUser(){
     inquirer.prompt([
         {
             message: "Guess a letter!",
             name: "userGuess"
         }
     ]).then(function(res){
-        for (i = 0; i < displayedWord.letterArray.length; i++){
-            displayedWord.letterArray[i].check(res.userGuess);
-        }
+        displayedWord.userGuess(res.userGuess);
         displayedWord.show();
-        userGuess();
+        propmtUser();
     })
 }
 
