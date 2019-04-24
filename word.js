@@ -7,7 +7,6 @@ var Word = function(hiddenWord){
         for (i = 0; i < hiddenWord.length; i++){
             this.letterArray.push(new Letter(hiddenWord[i]));
         }
-        this.show();
     }
     //show whole word in one line to console
     this.show = function(){
@@ -29,4 +28,3 @@ var Word = function(hiddenWord){
 
 module.exports = Word;
 
-var cat = new Word("cat");

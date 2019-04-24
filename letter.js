@@ -9,7 +9,6 @@ var Letter = function(char){
     this.reveal = function(){
         if (this.guessed){
         this.display = this.character + " ";
-        console.log(this.display);
         }
     }
     //checks if the guess is the letter, sets check to true if true, then changes display
@@ -20,10 +19,6 @@ var Letter = function(char){
         }
     }
 }
-
-var a = new Letter("a");
-console.log(a);
-a.check("a");
 
 module.exports = Letter;
 
