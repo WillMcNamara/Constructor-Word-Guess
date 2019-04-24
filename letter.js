@@ -25,4 +25,6 @@ var a = new Letter("a");
 console.log(a);
 a.check("a");
 
+module.exports = Letter;
+
 
